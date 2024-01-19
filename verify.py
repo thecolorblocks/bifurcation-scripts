@@ -19,12 +19,15 @@ with open(n, 'r') as file:
 for datapoint in odata:
   result = search(datapoint['id'], datapoint['meta']['name'], ndata)
   if len(result) == 1:
-    print('Verified '+datapoint['id'])
+    #print('Verified '+datapoint['id'])
     integris_count+=1
+  else:
+    print(f'Unaccounted {datapoint["meta"]["name"]} {datapoint["id"]}')
 
 print('')
 print(f'Old data inscriptions: {len(odata)}')
 print(f'New data matched: {integris_count}')
+print(f'New data total inscriptions: {len(ndata)}')
 
 if (len(odata) == integris_count):
   print(f'New data is good, added inscriptions: {(len(ndata)-len(odata))}')
