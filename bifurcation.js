@@ -6,7 +6,12 @@ const baseUrlOptions = {
   'luminex': 'https://brc20-api.luminex.io/ordinals/hash?payload_hash=',
   'ordinalsbot': 'https://api.ordinalsbot.com/search?hash='
 }
-const provider = 'ordinalsbot'
+/**
+ * Should use luminex be default
+ * ordinalsbot miss this one inscription currently:
+ * 4191cdb4677658c97cbfb77819a1ac4e6435066994b6dcee9907d14e8c2f51b3i0
+ */
+const provider = 'luminex'
 const baseUrl = baseUrlOptions[provider]
 
 const problematics = [
