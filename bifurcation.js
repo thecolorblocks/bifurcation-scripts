@@ -11,7 +11,7 @@ const baseUrlOptions = {
  * ordinalsbot miss this one inscription currently:
  * 4191cdb4677658c97cbfb77819a1ac4e6435066994b6dcee9907d14e8c2f51b3i0
  */
-const provider = 'luminex'
+const provider = 'ordinalsbot'
 const baseUrl = baseUrlOptions[provider]
 
 const problematics = [
